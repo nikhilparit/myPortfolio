@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 import Loader from '@/components/Loader';
 import UserInfo from '@/components/UserInfo';
 import CardSection from '@/components/CardSection';
+import Portfolio from '@/components/Portfolio';
 
 export default function HomeScreen() {
   const [fontsLoaded] = useFonts({
@@ -20,6 +21,7 @@ export default function HomeScreen() {
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <UserInfo />
         <CardSection />
+        <Portfolio />
       </ScrollView>
     </SafeAreaProvider>
   );
@@ -31,7 +33,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
   },
   scrollContent: {
-    marginTop:50
+    marginTop: 50
   },
 
 });

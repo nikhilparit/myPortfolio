@@ -19,7 +19,7 @@ export default function CardSection() {
         <View style={styles.safeArea}>
             <ScrollView
                 horizontal
-                showsHorizontalScrollIndicator={false}
+               // showsHorizontalScrollIndicator={false}
                 contentContainerStyle={styles.scrollContent}
             >
                 <View style={styles.cardContainer1}>
@@ -32,25 +32,47 @@ export default function CardSection() {
                         <Text style={commonStylesheet.cardRegularText}>Tips on increasing your go forward, Click on bell icon for notifications</Text>
                     </View>
                     <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', padding: 20 }}>
-                        <Text style={commonStylesheet.cardRegularText}>Tips on increasing your go forward</Text>
-                        <View style={styles.iconCirle}>
-                            <FontAwesome name="play" size={20} color="#ffffff" />
-                        </View>
+
+                        <Text style={commonStylesheet.cardRegularText}>Tips on increasing your income</Text>
+                        <TouchableOpacity>
+                            <View style={styles.iconCirlebottom}>
+                                <FontAwesome name="play" size={20} color="#2F3BAD" />
+                            </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
-                <View style={styles.cardContainer2} />
+                <View style={styles.cardContainer2}>
+                <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', padding: 20, }}>
+                        <TouchableOpacity>
+                            <View style={[styles.iconCirle,{backgroundColor:'#34B549'}]}>
+                                <FontAwesome name="bell" size={20} color="#ffffff" />
+                            </View>
+                        </TouchableOpacity>
+                        <Text style={commonStylesheet.cardRegularText}>Tips on increasing your go forward, Click on bell icon for notifications</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', padding: 20 }}>
+
+                        <Text style={commonStylesheet.cardRegularText}>Tips on increasing your income</Text>
+                        <TouchableOpacity>
+                            <View style={[styles.iconCirlebottom,]}>
+                                <FontAwesome name="play" size={20} color="#5EDBAE" />
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+
+                </View>
             </ScrollView>
         </View>
     );
 }
 
 const CARD_WIDTH = width * 0.8;
-const CARD_SPACING = 10;
+const CARD_SPACING = 5;
 
 const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
-        paddingVertical: 20,
+       // paddingVertical: 20,
     },
     scrollContent: {
         paddingHorizontal: 16,
@@ -72,6 +94,14 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         backgroundColor: '#2F3BAD',
+        borderRadius: 50,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    iconCirlebottom: {
+        width: 40,
+        height: 40,
+        backgroundColor: '#ffffff',
         borderRadius: 50,
         justifyContent: 'center',
         alignItems: 'center'
