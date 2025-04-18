@@ -23,11 +23,7 @@ export const portfolioData = createAsyncThunk<PortfolioData, void, { rejectValue
   async (_, { rejectWithValue }) => {
     try {
       const response = await Axios.get(`https://01.fy25ey02.64mb.io/`, {});
-<<<<<<< HEAD
       console.log("API Response:", response.data);
-=======
-      //console.log("API Response:", response.data);
->>>>>>> 896c0a4f7d8b516646573d1eb435c7a3678d218a
       return response.data;
     } catch (error) {
       console.error("Error fetching data:", error);
